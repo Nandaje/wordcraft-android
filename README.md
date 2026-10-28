@@ -200,7 +200,7 @@ covers every target starting with it (`wordcraft*=debug`). The logger is
 | L4 | `wordcraft-engine` | session, undo, 422 commands, document feature catalog |
 | L5 | `wordcraft-mcp` | MCP server |
 | L6 | `wordcraft-ui-egui` | the word processor front end (swappable) |
-| apps | `wordcraft`, `wordcraft-cli`, `wordcraft-web` | desktop, command line, browser |
+| apps | `wordcraft`, `wordcraft-android`, `wordcraft-cli`, `wordcraft-web` | desktop, Android, command line, browser |
 
 `cargo xtask ci` runs formatting, clippy, ~800 tests, the asset-attribution check, the layering
 check and the wasm build. Contributor and agent instructions: [AGENTS.md](AGENTS.md).
@@ -218,6 +218,14 @@ closer pagination fidelity, a stability sweep and native printing. Details and e
 ## Downloads
 
 **Download WordCraft** from GitHub: the [latest release](https://github.com/storytold/wordcraft/releases/latest) has every build listed below, and [all releases](https://github.com/storytold/wordcraft/releases) has earlier versions and their notes. `<ver>` in the file names is the version number, and `SHA256SUMS.txt` lists a checksum for every file.
+
+### Android
+
+| Build | APK |
+|---|---|
+| arm64-v8a (Android 8.0+ / API 26+) | `wordcraft-<ver>-android-arm64-v8a.apk` |
+
+Includes hardware GPU acceleration (**Vulkan 1.1+** primary backend with **OpenGL ES 3.0+** fallback via `wgpu`) and full file/media storage permissions (`READ_EXTERNAL_STORAGE`, `WRITE_EXTERNAL_STORAGE`, `READ_MEDIA_IMAGES`, `MANAGE_EXTERNAL_STORAGE`, and Storage Access Framework) for opening, importing, saving, and exporting documents, pictures, fonts, mail-merge recipients, and bibliography sources. See [docs/android.md](docs/android.md).
 
 ### Windows
 
